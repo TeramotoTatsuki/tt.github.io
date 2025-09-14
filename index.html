@@ -1,95 +1,111 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <title>寺本医院</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>寺本医院</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- ヒーロー（7秒毎に自動切替） -->
+    <header class="hero">
+      <img src="images/clinic_header.jpg" alt="病院の写真" />
+      <img src="images/clinic_header2.jpg" alt="受付の写真" />
+    </header>
 
-  <!-- ヒーロー（7秒毎に自動切替） -->
-  <header class="hero">
-    <img src="images/clinic_header.jpg" alt="病院の写真">
-    <img src="images/clinic_header2.jpg" alt="受付の写真">
-  </header>
+    <!-- 診療案内 -->
+    <section id="guide" class="container">
+      <h2>診療案内</h2>
+      <p>診療科目：内科・呼吸器内科<br /></p>
 
-  <!-- 診療案内 -->
-  <section id="guide" class="container">
-    <h2>診療案内</h2>
-    <p>
-      診療科目：内科・呼吸器内科<br>
-    </p>
+      <h3 class="subheading">診療時間</h3>
 
-  <h3 class="subheading">診療時間</h3>
+      <div class="table-wrap">
+        <table class="clinic-hours" role="grid" aria-label="診療時間">
+          <caption class="sr-only">
+            診療時間
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">時間帯</th>
+              <th scope="col">月</th>
+              <th scope="col">火</th>
+              <th scope="col">水</th>
+              <th scope="col">木</th>
+              <th scope="col">金</th>
+              <th scope="col">土</th>
+              <th scope="col">日・祝</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">9:00–12:00</th>
+              <td class="open">●</td>
+              <td class="open">●</td>
+              <td class="open">●</td>
+              <td class="open">●</td>
+              <td class="open">●</td>
+              <td class="open">●</td>
+              <td class="closed">－</td>
+            </tr>
+            <tr>
+              <th scope="row">14:00–18:00</th>
+              <td class="open">●</td>
+              <td class="open">●</td>
+              <td class="open">●</td>
+              <td class="closed">－</td>
+              <td class="open">●</td>
+              <td class="closed">－</td>
+              <td class="closed">－</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="legend" aria-label="凡例">
+        <li>
+          <span class="swatch open" aria-hidden="true">●</span>
+          <span>診療</span>
+        </li>
+        <li>
+          <span class="swatch closed" aria-hidden="true">－</span>
+          <span>休診</span>
+        </li>
+      </ul>
+      <p class="notes">※ 木曜・土曜は午前のみ。日曜・祝日は休診です。<br /></p>
 
-  <div class="table-wrap">
-    <table class="clinic-hours" role="grid" aria-label="診療時間">
-      <caption class="sr-only">診療時間</caption>
-      <thead>
-        <tr>
-          <th scope="col">時間帯</th>
-          <th scope="col">月</th>
-          <th scope="col">火</th>
-          <th scope="col">水</th>
-          <th scope="col">木</th>
-          <th scope="col">金</th>
-          <th scope="col">土</th>
-          <th scope="col">日・祝</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">9:00–12:00</th>
-          <td class="open">●</td><td class="open">●</td><td class="open">●</td>
-          <td class="open">●</td><td class="open">●</td><td class="open">●</td>
-          <td class="closed">－</td>
-        </tr>
-        <tr>
-          <th scope="row">14:00–18:00</th>
-          <td class="open">●</td><td class="open">●</td><td class="open">●</td>
-          <td class="open">●</td><td class="open">●</td><td class="closed">－</td>
-          <td class="closed">－</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+      <p>
+        電話番号：0725-32-1848<br />
+        ファックス：0725-21-7655<br />
+      </p>
+      <p>
+        ご来院時には、保険証、医療証各種をお持ちください。<br />
+        初診の方が事前に受付できるサービスがございます。症状なども入力頂けます。<br />
+        なお、当クリニックは予約制ではありません。<br />
+        基本的にはご来院された順番で診察いたしますので、診察状況によってはお待ちいただく場合もございます。<br />
+        あらかじめご了承ください。<br />
+      </p>
+    </section>
 
-  <p class="notes">
-    ※ 土曜は午前のみ。日・祝は休診です。<br>
-    ※ 受付は診療終了の30分前まで。
-  </p>
-  <ul class="legend">
-    <li><span class="dot open"></span>診療</li>
-    <li><span class="dot closed"></span>休診</li>
-  </ul>
+    <!-- アクセス -->
+    <section id="access" class="container">
+      <h2>アクセス</h2>
+      <p>〒595-0025 泉大津市旭町12-12</p>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.160125029386!2d135.40864209999998!3d34.4988246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000c5ab36282a21%3A0xfb3bc163cc0f2069!2z5a-65pys5Yy76Zmi!5e0!3m2!1sja!2sjp!4v1757849628984!5m2!1sja!2sjp"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+    </section>
 
-    <p>
-    電話番号：0725-32-1848<br>
-    ファックス：0725-21-7655<br>
-    </p>
-    <p>
-    ご来院時には、保険証、医療証各種をお持ちください。<br>
-    初診の方が事前に受付できるサービスがございます。症状なども入力頂けます。<br>
-    なお、当クリニックは予約制ではありません。<br>
-    基本的にはご来院された順番で診察いたしますので、診察状況によってはお待ちいただく場合もございます。<br>
-    あらかじめご了承ください。<br>
-    </p>
-  </section>
-
-  <!-- アクセス -->
-  <section id="access" class="container">
-    <h2>アクセス</h2>
-    <p>〒595-0025 泉大津市旭町12-12</p>
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.160125029386!2d135.40864209999998!3d34.4988246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000c5ab36282a21%3A0xfb3bc163cc0f2069!2z5a-65pys5Yy76Zmi!5e0!3m2!1sja!2sjp!4v1757849628984!5m2!1sja!2sjp"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; Copyright © TeramotoIin All rights reserved.</p>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; Copyright © TeramotoIin All rights reserved.</p>
+    </footer>
+  </body>
 </html>
