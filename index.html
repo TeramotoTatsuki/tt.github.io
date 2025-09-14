@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>〇〇クリニック</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>寺本医院</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
 
-  <!-- ヘッダー画像 -->
-  <header>
-    <img src="header.jpg" alt="クリニックの外観写真">
+  <!-- ヒーロー（7秒毎に自動切替） -->
+  <header class="hero">
+    <img src="images/clinic_header.jpg" alt="病院の写真">
+    <img src="images/clinic_header2.jpg" alt="受付の写真">
   </header>
 
   <!-- 診療案内 -->
-  <section id="guide">
+  <section id="guide" class="container">
     <h2>診療案内</h2>
     <p>
-      当クリニックでは、内科・小児科を中心に地域の皆さまの健康をサポートしています。<br>
-      診療時間：月〜金 9:00〜18:00（土曜 9:00〜13:00）<br>
-      休診日：日曜・祝日
+      診療科目：内科・呼吸器内科<br>
+      診療時間：<br>
+      <table class="timetable"><!--1-->
+        <tr>
+          <th class="time">&nbsp;</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="sat">土</th><th class="sun">日</th><th class="holiday">祝</th>
+        </tr>
+        <tr>
+          <td class="time2">9:00～12:30</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>ー</td><td>ー</td></tr><tr><td class="time2">16:30～19:00</td><td>〇</td><td>〇</td><td>〇</td><td>ー</td><td>〇</td><td>ー</td><td>ー</td><td>ー</td>
+        </tr>
+      </table>
+      休診日：木曜・土曜午後、日曜、祝日
+    </p>
+    <p>
+    電話番号：0725-32-1848<br>
+    ファックス：0725-21-7655<br>
+    </p>
+    <p>
+    ご来院時には、保険証、医療証各種をお持ちください。<br>
+    初診の方が事前に受付できるサービスがございます。症状なども入力頂けます。<br>
+    なお、当クリニックは予約制ではありません。<br>
+    基本的にはご来院された順番で診察いたしますので、診察状況によってはお待ちいただく場合もございます。<br>
+    あらかじめご了承ください。<br>
     </p>
   </section>
 
   <!-- アクセス -->
-  <section id="access">
+  <section id="access" class="container">
     <h2>アクセス</h2>
-    <p>〒123-4567 東京都新宿区〇〇1-2-3</p>
-    <!-- Googleマップ埋め込み（サンプル用に新宿駅を設定） -->
+    <p>〒595-0025 泉大津市旭町12-12</p>
     <div class="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.695449588124!2d139.698382015259!3d35.68963488019205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cd3f0bc123b%3A0x4a9f8d831bdb9e8b!2z5paw5a6_5Z-O44Oq44K444Or44O844K5!5e0!3m2!1sja!2sjp!4v1694670000000!5m2!1sja!2sjp"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.160125029386!2d135.40864209999998!3d34.4988246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000c5ab36282a21%3A0xfb3bc163cc0f2069!2z5a-65pys5Yy76Zmi!5e0!3m2!1sja!2sjp!4v1757849628984!5m2!1sja!2sjp"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
   </section>
 
-  <!-- フッター -->
   <footer>
-    <p>&copy; 2025 〇〇クリニック</p>
+    <p>&copy; Copyright © TeramotoIin All rights reserved.</p>
   </footer>
-
 </body>
 </html>
