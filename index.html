@@ -19,17 +19,51 @@
     <h2>診療案内</h2>
     <p>
       診療科目：内科・呼吸器内科<br>
-      診療時間：<br>
-      <table class="timetable"><!--1-->
-        <tr>
-          <th class="time">&nbsp;</th><th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th class="sat">土</th><th class="sun">日</th><th class="holiday">祝</th>
-        </tr>
-        <tr>
-          <td class="time2">9:00～12:30</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>〇</td><td>ー</td><td>ー</td></tr><tr><td class="time2">16:30～19:00</td><td>〇</td><td>〇</td><td>〇</td><td>ー</td><td>〇</td><td>ー</td><td>ー</td><td>ー</td>
-        </tr>
-      </table>
-      休診日：木曜・土曜午後、日曜、祝日
     </p>
+
+  <h3 class="subheading">診療時間</h3>
+
+  <div class="table-wrap">
+    <table class="clinic-hours" role="grid" aria-label="診療時間">
+      <caption class="sr-only">診療時間</caption>
+      <thead>
+        <tr>
+          <th scope="col">時間帯</th>
+          <th scope="col">月</th>
+          <th scope="col">火</th>
+          <th scope="col">水</th>
+          <th scope="col">木</th>
+          <th scope="col">金</th>
+          <th scope="col">土</th>
+          <th scope="col">日・祝</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">9:00–12:00</th>
+          <td class="open">●</td><td class="open">●</td><td class="open">●</td>
+          <td class="open">●</td><td class="open">●</td><td class="open">●</td>
+          <td class="closed">－</td>
+        </tr>
+        <tr>
+          <th scope="row">14:00–18:00</th>
+          <td class="open">●</td><td class="open">●</td><td class="open">●</td>
+          <td class="open">●</td><td class="open">●</td><td class="closed">－</td>
+          <td class="closed">－</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="notes">
+    ※ 土曜は午前のみ。日・祝は休診です。<br>
+    ※ 受付は診療終了の30分前まで。
+  </p>
+  <ul class="legend">
+    <li><span class="dot open"></span>診療</li>
+    <li><span class="dot closed"></span>休診</li>
+  </ul>
+
     <p>
     電話番号：0725-32-1848<br>
     ファックス：0725-21-7655<br>
