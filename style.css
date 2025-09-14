@@ -1,3 +1,70 @@
+/* ベース */
+* { box-sizing: border-box; }
+body {
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  margin: 0;
+  color: #333;
+  line-height: 1.7;
+  background: #fafafa;
+}
+.container {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+h2 {
+  border-left: 5px solid #0066cc;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* ヒーロー（スライド） */
+.hero {
+  position: relative;
+  width: 100%;
+  /* 比率固定：横長バナー（16:5程度） */
+  aspect-ratio: 16 / 5;
+  overflow: hidden;
+  background: #ddd;
+}
+.hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 余白なく美しく表示 */
+  opacity: 0;
+  animation: fade 14s infinite ease-in-out;
+}
+.hero img:nth-child(2) {
+  animation-delay: 7s; /* 2枚目は7秒遅らせて交互表示 */
+}
+
+/* 0-50%: フェードイン→表示 → 50-100%: フェードアウト */
+@keyframes fade {
+  0%   { opacity: 0; }
+  7%   { opacity: 1; }
+  43%  { opacity: 1; }  /* 約7秒表示 */
+  50%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* Googleマップ */
+.map { text-align: center; }
+.map iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  border: 0;
+}
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0066cc;
+  color: #fff;
+}
 /* 診療案内の見出し（任意で少し小さめ） */
 .subheading { margin: 8px 0 14px; font-size: 1.25rem; }
 
