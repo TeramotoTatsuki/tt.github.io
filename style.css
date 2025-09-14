@@ -18,23 +18,29 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* ヒーロー：高さ固定、左右は背景色でレターボックス */
+/* ヒーロー：高さ固定、余白は背景色 */
 .hero {
   position: relative;
   width: 100%;
-  height: 320px;           /* ← ここが固定高さ。お好みで数値変更OK */
+  height: 320px;              /* ← 固定高さ。必要なら数値だけ調整 */
+  background: var(--page-bg); /* 横余白はこの色で表示 */
   overflow: hidden;
-  background: var(--page-bg);
 }
+
+/* 画像：高さにフィット、幅は自動。中央配置。縦は絶対に切れない */
 .hero img {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 余白なく美しく表示 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); /* 中央寄せ */
+  height: 100%;    /* 高さをヒーローに合わせる */
+  width: auto;     /* 比率維持、横は自動で余白発生 */
+  max-width: none; /* ブラウザのデフォ制約を無効化 */
+  background: var(--page-bg); /* 画像の外側も背景と同化 */
   opacity: 0;
-  animation: fade 14s infinite ease-in-out;
+  animation: fade 14s infinite ease-in-out; /* 7秒切替×2 */
 }
+.hero img:nth-child(2) { animation-delay: 7s; }
 .hero img:nth-child(2) {
   animation-delay: 7s; /* 2枚目は7秒遅らせて交互表示 */
 }
@@ -155,4 +161,3 @@ footer {
   .clinic-hours tbody th,
   .clinic-hours td { padding: 10px 8px; }
 }
-
