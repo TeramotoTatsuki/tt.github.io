@@ -118,19 +118,35 @@ footer {
 /* ステータス色 */
 .clinic-hours td.open   { background: #e9f7f0; color: #146c43; font-weight: 700; }
 .clinic-hours td.closed { background: #f8e9e9; color: #8b2c2c; font-weight: 700; }
+/* ---- 色の共通変数（セル/凡例で共有） ---- */
+:root{
+  --open-bg:   #e9f7f0;
+  --open-fg:   #146c43;
+  --closed-bg: #f8e9e9;
+  --closed-fg: #8b2c2c;
+  --cell-bd:   #eef2f7;
+}
 
-/* 凡例・注記 */
-.legend {
-  display: flex; gap: 16px;
+/* 診療時間テーブル（既存の open/closed 定義を変数で書き換え） */
+.clinic-hours td.open   { background: var(--open-bg);   color: var(--open-fg);   font-weight: 700; }
+.clinic-hours td.closed { background: var(--closed-bg); color: var(--closed-fg); font-weight: 700; }
+
+/* ---- 凡例（セル風スウォッチ） ---- */
+.legend{
+  display: flex; gap: 20px;
   list-style: none; padding: 10px 0 0; margin: 8px 0 0;
-  color: #4b5563;
+  color: #4b5563; align-items: center;
 }
-.legend .dot {
-  display: inline-block; width: 10px; height: 10px; border-radius: 9999px;
-  margin-right: 6px; vertical-align: middle;
+.legend li{ display: flex; align-items: center; gap: 8px; }
+.legend .swatch{
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.6em; height: 2.0em;
+  border: 1px solid var(--cell-bd);
+  border-radius: 6px;
+  font-weight: 700; line-height: 1;
 }
-.legend .open  { background: #26a269; }
-.legend .closed { background: #c0392b; }
+.legend .swatch.open   { background: var(--open-bg);   color: var(--open-fg); }
+.legend .swatch.closed { background: var(--closed-bg); color: var(--closed-fg); }
 
 .notes { margin: 14px 0 0; color: #555; font-size: 0.95rem; }
 
