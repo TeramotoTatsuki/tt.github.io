@@ -1,3 +1,3 @@
 # tt.github.io
 clinic サンプルページ
-https://teramototatsuki.github.io/
+https://teramototatsuki.github.io/tt.github.io/
