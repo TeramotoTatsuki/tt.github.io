@@ -161,3 +161,82 @@ footer {
   .clinic-hours tbody th,
   .clinic-hours td { padding: 10px 8px; }
 }
+/* ========== 医療DXお知らせボックス ========== */
+:root{
+  --dx-green: #2f7d32;     /* 文字の緑 */
+  --dx-green-bg: #eaf6ec;  /* 見出しの淡い緑 */
+  --dx-border: #dfe3e8;    /* 外枠のグレー */
+}
+
+.notice-dx{
+  background: #fff;
+  border: 2px solid var(--dx-border);
+  border-radius: 10px;
+  padding: 16px 18px 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+/* タイトル：中央・緑系 */
+.notice-dx__title{
+  margin: 0 0 14px;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dx-green);
+  background: var(--dx-green-bg);
+  border: 1px solid #cfe6d2;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+/* 番号付き本文（緑の数字） */
+.notice-dx__list{
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 6px;
+  counter-reset: dx;
+}
+.notice-dx__list > li{
+  counter-increment: dx;
+  position: relative;
+  padding-left: 2.2em;
+  margin: 0.35em 0;
+  line-height: 1.8;
+}
+.notice-dx__list > li::before{
+  content: counter(dx) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--dx-green);
+  font-weight: 800;
+}
+
+/* 下部の「■〜」行（見た目を揃える） */
+.notice-dx__mark{
+  position: relative;
+  padding-left: 1.5em;
+  margin: 0.4em 0;
+  line-height: 1.8;
+}
+.notice-dx__mark::before{
+  content: "■";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--dx-green);
+  font-weight: 800;
+}
+
+/* リンクの色（緑系＋下線） */
+.notice-dx a{
+  color: var(--dx-green);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* スマホ微調整 */
+@media (max-width: 600px){
+  .notice-dx{ padding: 14px; }
+  .notice-dx__title{ font-size: 1.05rem; }
+}
